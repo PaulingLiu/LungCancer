@@ -63,10 +63,6 @@ tibble(
 pda <- as.data.frame(pda)
 rownames(pda) <- rownames(pr.matr)
 
-fhat <- kde(x=as.data.frame(pda[pda$patient == "MD01-004",1:2]))
-plot(fhat, display="filled.contour2", cont=seq(0,90,by=10), cex.lab=1.2, cex.axis=1.2, cex.main=1.2, cex.sub=1.2, col = c("white",brewer.pal(n = 9, name = 'GnBu')))
-points(pda[pda$patient == "MD01-004",1:2], pch = 19, cex=0.6, col = rgb(45, 67,121, 100, maxColorValue = 255))
-
 pda %>% readr::write_rds("/home/pauling/projects/08.lung.pd1/04.clone.tex.info.rds.gz", compress = "gz")
 
 #------------- Tex cell frequency -------------#
