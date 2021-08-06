@@ -1,1 +1,1 @@
-# LungCaner
+# LungCancer
